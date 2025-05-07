@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devesh Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo-section">
+        <img src="profile.jpg" alt="Devesh Kumar" class="profile-pic" />
+        <h1 class="logo">Devesh Kumar</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://github.com/Devesh-Rajput" target="_blank">
+            <img src="github.jpg" alt="GitHub" class="social-icon" />
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/devesh-kumar-aa3934317" target="_blank">
+            <img src="linkedIn.png" alt="LinkedIn" class="social-icon" />
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h2>Hi, I'm <span>Devesh Kumar</span></h2>
+      <p>A creative front-end developer passionate about stylish, responsive designs.</p>
+      <a href="#projects" class="btn">Explore Projects</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm currently pursuing B.Tech from <strong>Galgotias College of Engineering and Technology</strong>. I love turning ideas into digital reality through code. I’m focused on creating clean, modern, and responsive interfaces using <strong>HTML, CSS, and JavaScript</strong>.</p>
+      <p>I'm also sharpening my logic by learning <strong>Data Structures and Algorithms (DSA)</strong> with Java.</p>
+      <img src="galgotias.jpg" alt="Galgotias College Logo" class="college-logo" />
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" onclick="redirectToSpotify()">
+          <h3>🎧 Spotify Clone</h3>
+          <p>A stylish static Spotify homepage built with HTML & CSS.</p>
+        </div>
+        <div class="project-card">
+          <h3>🌐 Portfolio Website</h3>
+          <p>This responsive and animated portfolio built from scratch.</p>
+        </div>
+        <div class="project-card">
+          <h3>📱 App Landing Page</h3>
+          <p>A clean, modern landing page concept for a startup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Let’s collaborate and build something great together!</p>
+      <p>📞 Phone: <a href="tel:+916395029853">+91 63950 29853</a></p>
+      <p>📧 Email: <a href="mailto:devesh190905@gmail.com">devesh190905@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Devesh Kumar. Designed with ❤️ & passion for clean code.</p>
+  </footer>
+
+  <script>
+    function redirectToSpotify() {
+      window.open("https://github.com/Devesh-Rajput/Spotify_Clone", "_blank");
+    }
+  </script>
+</body>
+</html>
