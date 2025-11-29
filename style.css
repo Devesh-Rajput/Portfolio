@@ -1,0 +1,71 @@
+/* Define custom transition properties for scroll animations */
+.animate-on-scroll {
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(40px);
+}
+/* Style for when the element is in view */
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color, #1e293b); /* Default dark theme */
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color, #4f46e5); /* Default dark theme */
+    border-radius: 4px;
+}
+
+/* Set up CSS variables for theme-specific colors (Light Theme Default) */
+:root {
+    --bg-color: #f0fdfa; /* Light: Emerald-50 for a softer white */
+    --text-color: #0f172a; /* Slate-900 */
+    --card-bg: #ffffff; 
+    --card-hover-bg: #f8fcfb; /* Very slight color change on hover for light mode */
+    --primary-color: #059669; /* Emerald-600 */
+    --secondary-color: #047857; /* Emerald-700 */
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --scrollbar-track-color: #f0fdfa;
+    --scrollbar-thumb-color: #059669;
+}
+
+/* Dark Theme Overrides */
+.dark {
+    --bg-color: #080a13; /* Very dark blue/slate */
+    --text-color: #f0fdfa; /* Light Emerald */
+    --card-bg: #1e293b; /* Slate-800 */
+    --card-hover-bg: #2d3748; /* Slight color change on hover for dark mode (Slate-700 equivalent) */
+    --primary-color: #34d399; /* Emerald-400 */
+    --secondary-color: #10b981; /* Emerald-500 */
+    --card-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.05), 0 4px 6px -4px rgba(255, 255, 255, 0.05);
+    --scrollbar-track-color: #080a13;
+    --scrollbar-thumb-color: #34d399;
+}
+
+/* Apply CSS variables via Tailwind utility classes */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    /* Assuming a font is loaded/available */
+    font-family: 'Inter', sans-serif; 
+}
+.card {
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    /* Added transform to the transition for hover effects */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; 
+}
+/* Add hover color change effect */
+.card:hover {
+    background-color: var(--card-hover-bg);
+}
+.text-primary { color: var(--primary-color); }
+.bg-primary { background-color: var(--primary-color); }
+.hover-bg-secondary:hover { background-color: var(--secondary-color); }
+.border-primary { border-color: var(--primary-color); }
