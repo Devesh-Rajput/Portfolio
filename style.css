@@ -4,7 +4,7 @@
     opacity: 0;
     transform: translateY(40px);
 }
-/* Style for when the element is in view */
+/* Style for when the element is in views */
 .animate-on-scroll.in-view {
     opacity: 1;
     transform: translateY(0);
